@@ -7,6 +7,22 @@ YESNO_CHOICES = (
 
 
 class Vehicle(models.Model):
+    vehicle_model = models.ForeignKey(
+        'VehicleModel',
+        on_delete=models.CASCADE,
+        verbose_name='Model',
+        related_name='model_vehicle',
+        blank=True,
+        null=True
+    )
+    engine = models.ForeignKey(
+        'Engine',
+        on_delete=models.CASCADE,
+        verbose_name='engine',
+        related_name='engine_vehicle',
+        blank=True,
+        null=True
+    )
     vin = models.CharField(
         verbose_name='VIN',
         max_length=75,
@@ -21,6 +37,7 @@ class Vehicle(models.Model):
         blank=True,
         null=True,
     )
+    price = models.DecimalField(max_digits=19,decimal_places=2,null=True)
 
 
 class VehicleModel(models.Model):
