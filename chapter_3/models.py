@@ -138,8 +138,29 @@ class engine2(models.Model):
         blank=True,
         null=True
     )
+    vehicle_model = models.ForeignKey(
+        VehicleModel,
+        on_delete=models.CASCADE,
+        verbose_name='Model',
+        related_name='model_engine2',
+        blank=True,
+        null=True,
+    )
 
     # using db_table to explicitly specify the db_table of engine2
     # by default it would be {{app_name}}_{{model_name}}
     class Meta:
+        abstract = True  # allows us to use the class as a parent class
         db_table = 'chapter3_practice_engine'
+        ordering = ['name']
+        verbose_name = 'Practice Engine'
+        verbose_name_plural = 'Practice Engines'
+
+
+class engine3(engine2):
+    other_name = models.CharField(
+        verbose_name='Other Engine Name',
+        max_length=75,
+        blank=True,
+        null=True,
+    )
