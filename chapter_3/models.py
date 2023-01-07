@@ -64,6 +64,14 @@ class Vehicle(models.Model):
     )
     price = models.DecimalField(max_digits=19, decimal_places=2, null=True)
 
+    # adding the model managers
+    # the default model manager
+    objects = models.Manager()
+    # The buick specific manager
+    buick_objects = BuickVehicleManager()
+    # the chevy specific manager
+    chevy_objects = ChevyVehicleManager()
+
     def __str__(self):
         MAKE_CHOICES_DICT = dict(MAKE_CHOICES)
         return MAKE_CHOICES_DICT[self.make] + ' ' + self.vehicle_model.name
