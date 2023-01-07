@@ -76,7 +76,7 @@ class VehicleModel(models.Model):
                 name='desc_name_idx'
             ),
             models.Index(
-                Lower('name').desc(),
+                fields=Lower('name').desc(),
                 name='lower_name_idx'
             )
 
