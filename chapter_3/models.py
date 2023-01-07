@@ -2,6 +2,17 @@ from django.db import models
 from django.db.models.functions import Lower
 from django.contrib.auth.models import AbstractUser
 
+
+class BuickVehicleManager(models.Manager):
+    def get_queryset(self):
+        return super(BuickVehicleManager, self).get_queryset().filter(make=1)
+
+
+class ChevyVehicleManager(models.Manager):
+    def get_queryset(self):
+        return super(ChevyVehicleManager, self).get_queryset().filter(make=3)
+
+
 YESNO_CHOICES = (
     (True, 'Yes'),
     (False, 'No'),
