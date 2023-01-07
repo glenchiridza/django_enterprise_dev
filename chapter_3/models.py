@@ -56,6 +56,12 @@ class Vehicle(models.Model):
         MAKE_CHOICES_DICT = dict(MAKE_CHOICES)
         return MAKE_CHOICES_DICT[self.make] + ' ' + self.vehicle_model.name
 
+    # custom model method, add @property so that we access the function as a field of that model, rather than as a
+    # function e.g my_object.full_vehicle_name rather than my_object.full_vehicle_name()
+    @property
+    def full_vehicle_name(self):
+        return self.__str__() + ' - ' + self.engine.name
+
 
 class VehicleModel(models.Model):
     name = models.CharField(
