@@ -1,8 +1,15 @@
 from django.db import models
+from django.db.models.functions import Lower
 
 YESNO_CHOICES = (
     (True, 'Yes'),
     (False, 'No'),
+)
+
+MAKE_CHOICES = (
+    (1, 'Buick'),
+    (2, 'Cadillac'),
+    (3, 'Chevrolet'),
 )
 
 
@@ -20,6 +27,12 @@ class Vehicle(models.Model):
         on_delete=models.CASCADE,
         verbose_name='engine',
         related_name='engine_vehicle',
+        blank=True,
+        null=True
+    )
+    make = models.PositiveIntegerField(
+        choices=MAKE_CHOICES,
+        verbose_name='Vehicle Make/Brand',
         blank=True,
         null=True
     )
@@ -48,6 +61,26 @@ class VehicleModel(models.Model):
         blank=True,
         null=True,
     )
+
+    class Meta:
+        verbose_name = 'Vehicle Model'
+        verbose_name_plural = 'Vehicle Models'
+
+        # ordering = ['name', 'someotherfield'] ascending order
+        ordering = ['-name']  # descending order
+
+        indexes = [
+            models.Index(fields=['name']),
+            models.Index(
+                fields=['-name'],
+                name='desc_name_idx'
+            ),
+            models.Index(
+                Lower('name').desc(),
+                name='lower_name_idx'
+            )
+
+        ]
 
 
 class Engine(models.Model):
