@@ -1,8 +1,8 @@
 from django.db import models
 
 YESNO_CHOICES = (
-    (True,'Yes'),
-    (False,'No'),
+    (True, 'Yes'),
+    (False, 'No'),
 )
 
 
@@ -37,7 +37,7 @@ class Vehicle(models.Model):
         blank=True,
         null=True,
     )
-    price = models.DecimalField(max_digits=19,decimal_places=2,null=True)
+    price = models.DecimalField(max_digits=19, decimal_places=2, null=True)
 
 
 class VehicleModel(models.Model):
@@ -51,9 +51,33 @@ class VehicleModel(models.Model):
 
 
 class Engine(models.Model):
+    vehicle_model = models.ForeignKey(
+        VehicleModel,
+        on_delete=models.CASCADE,
+        verbose_name='Model',
+        related_name='model_engine',
+        blank=True,
+        null=True
+    )
     name = models.CharField(
         verbose_name='Engine',
         max_length=75,
         blank=True,
         null=True,
+    )
+
+
+class Seller(models.Model):
+    name = models.CharField(
+        verbose_name='Seller Name',
+        max_length=150,
+        blank=True,
+        null=True,
+    )
+    vehicle = models.ManyToManyField(
+        Vehicle,
+        verbose_name='Vehicles',
+        related_name='vehicle_sellers',
+        related_query_name='vehicle_seller',
+        blank=True,
     )
