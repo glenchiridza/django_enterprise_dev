@@ -123,7 +123,9 @@ STATIC_ROOT = posixpath.join(
 
 MEDIA_URL = '/=media/'
 MEDIA_ROOT = posixpath.join(
-    *(BASE_DIR.split(os.path.sep)+['media'])
+    *(BASE_DIR.split(os.path.sep) + ['media'])
 )
 
 # DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
+
+AUTH_USER_MODEL = 'chapter_3.Seller'

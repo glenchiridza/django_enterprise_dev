@@ -115,7 +115,7 @@ class Engine(models.Model):
     )
 
 
-class Seller(models.Model):
+class Seller(AbstractUser):
     name = models.CharField(
         verbose_name='Seller Name',
         max_length=150,
