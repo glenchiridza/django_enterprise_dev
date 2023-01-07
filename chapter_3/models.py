@@ -118,3 +118,18 @@ class Seller(models.Model):
         related_query_name='vehicle_seller',
         blank=True,
     )
+
+
+# for side practice we use the engine2 in lowercase model
+class engine2(models.Model):
+    name = models.CharField(
+        verbose_name='Engine',
+        max_length=75,
+        blank=True,
+        null=True
+    )
+
+    # using db_table to explicitly specify the db_table of engine2
+    # by default it would be {{app_name}}_{{model_name}}
+    class Meta:
+        db_table = 'chapter3_practice_engine'
