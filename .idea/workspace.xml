@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="109dc178-8eb9-4691-afa1-36411e0d216d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/chapter_3/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/chapter_3/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,9 +38,9 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="674" y="225" key="com.intellij.ide.util.TipDialog" timestamp="1673111078448">
+    <state x="674" y="225" key="com.intellij.ide.util.TipDialog" timestamp="1673315828873">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
-    <state x="674" y="225" key="com.intellij.ide.util.TipDialog/0.27.1366.741@0.27.1366.741" timestamp="1673111078448" />
+    <state x="674" y="225" key="com.intellij.ide.util.TipDialog/0.27.1366.741@0.27.1366.741" timestamp="1673315828873" />
   </component>
 </project>
