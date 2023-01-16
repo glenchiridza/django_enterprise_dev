@@ -1,6 +1,9 @@
-from django.urls import path, register_converter
+from django.urls import path, register_converter, re_path
 from django.views.generic import TemplateView, RedirectView
 from .converters import YearConverter
+
+from .views import practice_view,vehicle_view
+
 
 register_converter(YearConverter, 'year')
 
@@ -27,5 +30,13 @@ urlpatterns = [
     path(
         'my_year_path/<year:year>/',
         TemplateView.as_view(template_name='chapter_four/index.html')),
+    # instead of making a custome converter, can use the regular expression path
+    re_path(
+        'my_year_pathy/(?P<year>[0-9]{4})/$',
+        TemplateView.as_view(template_name='chapter_four/index.html')
+    ),
+
+    path('practice_path/<year:year>/',practice_view),
+    path('vehicle/<int:id>/',vehicle_view,name='vehicle-detail'),
 
 ]
