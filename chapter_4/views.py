@@ -12,7 +12,17 @@ from django.template.response import (
 
 from chapter_3.models import Vehicle
 
+def vehicle_view(request,id):
+    try:
+        vehicle = Vehicle.objects.get(id=id)
+    except Vehicle.DoesNotExist:
+        raise Http404(f'vehicle id not found: {id}')
 
+    return TemplateResponse(
+        request,
+        'chapter_4/my_vehicle.html',
+        {'vehicle':vehicle}
+    )
 
 
 

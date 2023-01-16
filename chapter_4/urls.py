@@ -36,7 +36,7 @@ urlpatterns = [
         TemplateView.as_view(template_name='chapter_four/index.html')
     ),
 
-    path('practice_path/<year:year>/',practice_view),
+    path('practice_path/<year:year>/',practice_view,name='year_url'),
     path('vehicle/<int:id>/',vehicle_view,name='vehicle-detail'),
 
 ]

@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="109dc178-8eb9-4691-afa1-36411e0d216d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/chapter_4/templates/chapter_4/my_vehicle.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chapter_4/converters.py" beforeDir="false" afterPath="$PROJECT_DIR$/chapter_4/converters.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chapter_4/templates/chapter_4/book.html" beforeDir="false" afterPath="$PROJECT_DIR$/chapter_4/templates/chapter_4/practice_page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chapter_4/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/chapter_4/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chapter_3/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/chapter_3/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chapter_3/migrations/0001_initial.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/chapter_4/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/chapter_4/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +65,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="737" y="147" width="526" height="511" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1673865751264">
+      <screen x="0" y="27" width="1366" height="741" />
+    </state>
+    <state x="737" y="147" width="526" height="511" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.27.1366.741@0.27.1366.741" timestamp="1673865751264" />
     <state x="674" y="225" key="com.intellij.ide.util.TipDialog" timestamp="1673315828873">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
