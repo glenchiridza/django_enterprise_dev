@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     'chapter_2.apps.Chapter2Config',
     'chapter_3.apps.Chapter3Config',
+    'chapter_4.apps.Chapter4Config',
 ]
 
 MIDDLEWARE = [
@@ -57,7 +58,7 @@ ROOT_URLCONF = 'django_enterprise_dev.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR,'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
