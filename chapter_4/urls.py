@@ -1,5 +1,8 @@
-from django.urls import path
+from django.urls import path, register_converter
 from django.views.generic import TemplateView, RedirectView
+from .converters import YearConverter
+
+register_converter(YearConverter, 'year')
 
 app_name = "chapter_4"
 urlpatterns = [
@@ -18,4 +21,11 @@ urlpatterns = [
             url='http://localhost:8000/my_wanted_url/'
         )
     ),
+    # path converters, path,int,str,slug,uuid
+    path('my_path/<path:my_pattern>/',
+         TemplateView.as_view(template_name='chapter_four/index.html')),
+    path(
+        'my_year_path/<year:year>/',
+        TemplateView.as_view(template_name='chapter_four/index.html')),
+
 ]
