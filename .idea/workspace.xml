@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="109dc178-8eb9-4691-afa1-36411e0d216d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chapter_4/templates/chapter_4/practice_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/chapter_4/templates/chapter_4/practice_page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django_enterprise_dev/context_processors.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_enterprise_dev/context_processors.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/django_enterprise_dev/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_enterprise_dev/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/django_enterprise_dev/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_enterprise_dev/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
