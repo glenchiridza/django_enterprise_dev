@@ -117,14 +117,22 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = posixpath.join(
-    *(BASE_DIR.split(os.path.sep) + ['static'])
-)
+# STATIC_ROOT = posixpath.join(
+#     *(BASE_DIR.split(os.path.sep) + ['static'])
+# )
+STATIC_ROOT = 'static_root'
 
-MEDIA_URL = '/=media/'
-MEDIA_ROOT = posixpath.join(
-    *(BASE_DIR.split(os.path.sep) + ['media'])
-)
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static')
+]
+
+MEDIA_URL = '/media/'
+# MEDIA_ROOT = posixpath.join(
+#     *(BASE_DIR.split(os.path.sep) + ['media'])
+# )
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 
 # DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
