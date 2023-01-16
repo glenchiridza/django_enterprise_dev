@@ -4,3 +4,5 @@ def global_context(request):
             '/'
         )[:-1].strip('/'),
     }
+
+# remove the last slash in base url -- [:-1].strip('/'),

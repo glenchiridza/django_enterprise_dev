@@ -8,5 +8,9 @@
 <h1>We are in practice page</h1>
 
 <h5>Year: {{year}}</h5>
+
+<!--using the global context processor base_url-->
+{{base_url}}
+<a href="{{ base_url }}{% url 'chapter4:year_url' 2023 %}">2023</a>
 </body>
 </html>
